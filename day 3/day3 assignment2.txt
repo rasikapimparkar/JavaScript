@@ -1,0 +1,28 @@
+var and let are both used for variable declaration in javascript but the difference between them is that var is function scoped and let is block scoped.
+It can be said that a variable declared with var is defined throughout the program as compared to let.
+An example will clarify the difference even better
+Example of var:
+
+Input:
+console.log(x);
+var x=5;
+console.log(x);
+const statement values can be assigned once and they cannot be reassigned. The scope of const statement works similar to let statements.
+
+Example: const a =10;
+
+function nodeSimplified(){
+  const MY_VARIABLE =10;
+  console.log(MY_VARIABLE);  //output 10 
+}
+As per usual, naming standards dictated that we declare the const variable in capital letters. const a =10 will work the same way as the code given above. Naming standards should be followed to maintain the code for the long run.
+
+Question: What will happen when we try to reassign the const variable?
+Consider the following code snippet.
+
+function nodeSimplified(){
+  const MY_VARIABLE =10;
+  console.log(MY_VARIABLE);  //output 10
+  MY_VARIABLE =20;           //throws type error
+  console.log(MY_VARIABLE); 
+}
